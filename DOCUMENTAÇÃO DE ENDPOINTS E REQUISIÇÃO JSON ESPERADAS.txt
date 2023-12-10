@@ -1,0 +1,57 @@
+DOCUMENTAÇÃO DE ENDPOINTS E REQUISIÇÃO JSON ESPERADA.
+
+-----------------SEM NECESSIDADE DE TOLKIEN:-------------------
+
+CADASTRAR USUÁRIO (POST):
+http://localhost:9000/api/user/criar-usuario/
+BODY:
+{
+    "nome_completo": "Nome Sobrenome",
+    "data_nascimento": "1950-12-10",
+    "cpf": "12345678909",
+    "email": "usuario@example.com",
+    "senha": "senha123",
+    "endereco_numero": "123",
+    "endereco_complemento": "Apto 1",
+    "endereco_cep": "19600037"
+}
+
+LOGIN (POST):
+http://localhost:9000/api/login
+BODY:
+{
+    "email": "usuario@example.com",
+    "senha": "senha123"
+}
+
+-----------------COM NECESSIDADE DE TOLKIEN:-------------------
+
+OBTER USUÁRIO (GET):
+http://localhost:9000/api/user/{USER_ID}
+
+OBTER USUÁRIOS (GET):
+http://localhost:9000/api/users
+
+CONSULTAR TOLKIEN (GET):
+http://localhost:9000/api/me
+
+HISTORICO DE TRANSAÇÕES (GET):
+http://localhost:9000/api/transaction/historico/{USER_ID}
+
+DEPOSITAR (POST):
+http://localhost:9000/api/transaction/depositar/
+BODY:
+{
+    "value": 100
+}
+
+TRANSFERIR (POST):
+http://localhost:9000/api/transaction/transferir/
+BODY:
+{
+    "destinationAccountId": 2,
+    "value": 50
+}
+
+LOGOUT (POST):
+http://localhost:9000/api/logout
