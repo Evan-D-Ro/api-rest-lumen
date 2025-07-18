@@ -1,6 +1,6 @@
 DOCUMENTAÇÃO DE ENDPOINTS E REQUISIÇÃO JSON ESPERADA.
 
------------------SEM NECESSIDADE DE TOLKIEN:-------------------
+-----------------SEM NECESSIDADE DE TOKEN:-------------------
 
 CADASTRAR USUÁRIO (POST):
 http://localhost:9000/api/user/criar-usuario/
@@ -24,7 +24,7 @@ BODY:
     "senha": "senha123"
 }
 
------------------COM NECESSIDADE DE TOLKIEN:-------------------
+-----------------COM NECESSIDADE DE TOKEN:-------------------
 
 OBTER USUÁRIO (GET):
 http://localhost:9000/api/user/{USER_ID}
@@ -32,7 +32,7 @@ http://localhost:9000/api/user/{USER_ID}
 OBTER USUÁRIOS (GET):
 http://localhost:9000/api/users
 
-CONSULTAR TOLKIEN (GET):
+CONSULTAR TOKEN (GET):
 http://localhost:9000/api/me
 
 HISTORICO DE TRANSAÇÕES (GET):
